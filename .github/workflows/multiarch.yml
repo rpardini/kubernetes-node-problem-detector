@@ -49,7 +49,7 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ghcr.io/${{ secrets.DOCKER_GITHUB_USERNAME }}/${{ github.event.repository.name }}:latest,ghcr.io/${{ secrets.DOCKER_GITHUB_USERNAME }}/${{ github.event.repository.name }}:${{ github.sha }}
+          tags: ghcr.io/${{ secrets.DOCKER_GITHUB_USERNAME }}/${{ github.event.repository.name }}:v086,ghcr.io/${{ secrets.DOCKER_GITHUB_USERNAME }}/${{ github.event.repository.name }}:${{ github.sha }}
           labels: |
             org.opencontainers.image.title=${{ github.event.repository.name }}
             org.opencontainers.image.description=${{ github.event.repository.description }}
