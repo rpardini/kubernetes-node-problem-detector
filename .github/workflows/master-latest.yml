@@ -34,7 +34,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ secrets.DOCKER_GITHUB_USERNAME }} # github username
-            password: ${{ secrets.DOCKER_GITHUB_PAT }}      # github personal access token for the owner
+          password: ${{ secrets.DOCKER_GITHUB_PAT }}      # github personal access token for the owner
 
       - name: Prepare
         id: prep
