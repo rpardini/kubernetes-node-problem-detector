@@ -30,5 +30,6 @@ RUN clean-install util-linux libsystemd0 bash
 RUN test -h /etc/localtime && rm -f /etc/localtime && cp /usr/share/zoneinfo/UTC /etc/localtime || true
 COPY --from=builder /go/src/k8s.io/node-problem-detector/bin/node-problem-detector /
 COPY --from=builder /go/src/k8s.io/node-problem-detector/bin/health-checker /home/kubernetes/bin/
+COPY --from=builder /go/src/k8s.io/node-problem-detector/bin/log-counter /home/kubernetes/bin/
 COPY config /config
 #ENTRYPOINT ["/node-problem-detector", "--config.system-log-monitor=/config/kernel-monitor.json"]
